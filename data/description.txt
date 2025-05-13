@@ -1,0 +1,7 @@
+source link of data: https://clue.io/data/CMap2020#LINCS2020
+
+filed used in the provided link: 
+level5_beta_trt_xpr_n142901x12328.gctx: expression data
+siginfo_beta.txt: meta data that consists info about gene name being modified and unique id to link those info to expr data
+LINCS2020 Release Metadata Field Definitions.xlsx: Definition of term used
+geneinfo_beta.txt: consists gene id that could map the genes in the expr data to actual gene name
