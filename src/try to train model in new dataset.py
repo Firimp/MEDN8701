@@ -31,7 +31,7 @@ else:
     X_CSV = r"C:\Users\ryan\Desktop\ADVANCED Master\data\X_DANG_raw.csv"
     Y_CSV = r"C:\Users\ryan\Desktop\ADVANCED Master\data\y_DANG_raw.csv"
 # -------------------- Dataset定义 --------------------
-class HCC44Dataset(Dataset):
+class PrepDataset(Dataset):
     def __init__(self, X_csv, y_csv):
         X_df = pd.read_csv(X_csv, index_col=0)
         y_df = pd.read_csv(y_csv, index_col=0)
@@ -150,7 +150,7 @@ class NormalNN(nn.Module):
 
 # -------------------- 准备数据 --------------------
 try:
-    ds = HCC44Dataset(X_CSV, Y_CSV)
+    ds = PrepDataset(X_CSV, Y_CSV)
 except FileNotFoundError:
     print(f"错误: 找不到数据文件。请检查路径:\nX_CSV: {X_CSV}\nY_CSV: {Y_CSV}")
     exit()
