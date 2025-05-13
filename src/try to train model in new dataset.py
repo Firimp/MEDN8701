@@ -78,7 +78,7 @@ class ODEFunc(nn.Module):
         return out * 0.5 + residual * 0.5
 
 class NeuralODE(nn.Module):
-    def __init__(self, num_conditions, embedding_dim, ode_hidden_dim, output_dim, solver='rk4', dropout=DROPOUT):
+    def __init__(self, num_conditions, embedding_dim, ode_hidden_dim, output_dim, solver='dopri5', dropout=DROPOUT):
         super().__init__()
         self.embedding = nn.Embedding(num_conditions, embedding_dim)
         self.input_layer = nn.Sequential(
